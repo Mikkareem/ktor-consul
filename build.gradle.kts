@@ -37,7 +37,7 @@ publishing {
         register<MavenPublication>("default") {
             groupId = "com.techullurgy"
             artifactId = "ktor-consul"
-            version = "0.0.2-alpha"
+            version = "0.0.3-alpha"
             from(components["java"])
         }
     }
