@@ -34,6 +34,7 @@ publishing {
             groupId = "com.techullurgy"
             artifactId = "ktor-consul"
             version = "0.0.1-alpha"
+            from(components["java"])
         }
     }
 }
