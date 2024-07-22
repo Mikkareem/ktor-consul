@@ -18,6 +18,10 @@ dependencies {
     implementation("io.ktor:ktor-client-apache")
 }
 
+application {
+    mainClass.set("")
+}
+
 publishing {
     repositories {
         maven {
