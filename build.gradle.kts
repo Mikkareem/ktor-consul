@@ -25,7 +25,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/Mikkareem/ktor-consul")
             credentials {
                 username = System.getenv("GITHUB_PACKAGE_USER")
-                password = System.getenv("GITHUB_PACKAGE_PASSWORD")
+                password = System.getenv("GITHUB_PACKAGE_CREDENTIALS")
             }
         }
     }
