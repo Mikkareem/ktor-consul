@@ -1,8 +1,9 @@
 val logback_version: String by project
+val ktor_version = "2.3.12"
 
 plugins {
     kotlin("jvm") version "2.0.0"
-    id("io.ktor.plugin") version "2.3.12"
+    id("java-library")
     `maven-publish`
 }
 
@@ -14,12 +15,8 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-core-jvm")
-    implementation("io.ktor:ktor-client-apache")
-}
-
-application {
-    mainClass.set("")
+    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
+    implementation("io.ktor:ktor-client-apache:$ktor_version")
 }
 
 publishing {
@@ -37,8 +34,8 @@ publishing {
         register<MavenPublication>("default") {
             groupId = "com.techullurgy"
             artifactId = "ktor-consul"
-            version = "0.0.3-alpha"
-            from(components["java"])
+            version = "0.0.6-alpha"
+            from(components["kotlin"])
         }
     }
 }
